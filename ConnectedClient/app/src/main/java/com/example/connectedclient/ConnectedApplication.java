@@ -5,19 +5,16 @@ import android.app.Application;
 
 import com.example.connectedclient.di.ConnectedApplicationComponent;
 
+import javax.inject.Inject;
+
 public class ConnectedApplication extends Application {
 
     private ConnectedApplicationComponent component;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-
+    @Inject
+    public ConnectedApplication(ConnectedApplicationComponent component){
+        this.component = component;
     }
-
-
-
 
     ConnectedApplicationComponent getComponent(){
         return component;

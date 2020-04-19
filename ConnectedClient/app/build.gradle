@@ -6,12 +6,17 @@ android {
 
     defaultConfig {
         applicationId "com.example.connectedclient"
-        minSdkVersion 29
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
     }
 
     buildTypes {
@@ -38,4 +43,12 @@ dependencies {
     implementation 'com.google.dagger:dagger-android-support:2.20'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.20'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.20'
+
+    //Retrofit
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    //Robolectric
+    testImplementation 'org.robolectric:robolectric:4.3.1'
 }
