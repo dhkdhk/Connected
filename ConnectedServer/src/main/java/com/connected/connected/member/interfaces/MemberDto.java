@@ -2,12 +2,13 @@ package com.connected.connected.member.interfaces;
 
 
 import com.connected.connected.member.domain.Account;
+import com.connected.connected.member.interfaces.support.PhoneNumberConstraint;
 import lombok.*;
 
 import javax.validation.constraints.Email;
 
 
-@Builder
+@Builder @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access=AccessLevel.PRIVATE)
 public class MemberDto {
@@ -16,6 +17,8 @@ public class MemberDto {
     private String memberEmail;
     private String memberNickName;
     private int age;
+
+    @PhoneNumberConstraint
     private String phoneNumber;
     private Account account;
 

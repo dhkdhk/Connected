@@ -13,7 +13,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@SpringBootTest
 public class MemberControllerTest extends ControllerSupport {
 
     private Account account;
@@ -29,7 +28,7 @@ public class MemberControllerTest extends ControllerSupport {
         MemberDto memberDto = MemberDto.builder()
                 .memberEmail("MemberEMailsaskjlgas")
                 .memberNickName("닉네임")
-                .phoneNumber("010-2389-3781")
+                .phoneNumber("010-3781")
                 .age(5)
                 .account(account)
                 .build();

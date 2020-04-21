@@ -1,6 +1,8 @@
 package com.connected.connected.member.domain;
 
+import javax.persistence.Embeddable;
 
+@Embeddable
 public class Account {
 
     private String accessToken;
