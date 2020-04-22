@@ -1,14 +1,13 @@
 package com.connected.connected.member.interfaces.handler;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter @NoArgsConstructor
+@Getter
 public class ErrorResource {
 
     private List<ErrorInformation> errorResources = new ArrayList<>();
@@ -26,6 +25,7 @@ public class ErrorResource {
             ErrorInformation errorInformation = ErrorInformation.builder()
                     .objectName(fieldError.getObjectName())
                     .fieldName(fieldError.getField())
+                    .defaultMessage(fieldError.getDefaultMessage())
                     .rejectedValue((String) fieldError.getRejectedValue())
                     .build();
             errorResources.add(errorInformation);

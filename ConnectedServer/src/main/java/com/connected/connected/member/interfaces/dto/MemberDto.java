@@ -1,8 +1,8 @@
-package com.connected.connected.member.interfaces;
+package com.connected.connected.member.interfaces.dto;
 
 
 import com.connected.connected.member.domain.Account;
-import com.connected.connected.member.interfaces.support.PhoneNumberConstraint;
+import com.connected.connected.member.interfaces.dto.validation.PhoneNumberConstraint;
 import lombok.*;
 
 import javax.validation.constraints.Email;

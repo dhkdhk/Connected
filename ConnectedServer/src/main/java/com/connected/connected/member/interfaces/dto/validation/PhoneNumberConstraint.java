@@ -1,4 +1,4 @@
-package com.connected.connected.member.interfaces.support;
+package com.connected.connected.member.interfaces.dto.validation;
 
 
 import javax.validation.Constraint;
