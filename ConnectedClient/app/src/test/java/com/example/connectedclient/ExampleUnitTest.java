@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Build;
 import android.widget.EditText;
 
-import com.example.connectedclient.ui.LoginActivity;
+import com.example.connectedclient.view.LoginActivity;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
