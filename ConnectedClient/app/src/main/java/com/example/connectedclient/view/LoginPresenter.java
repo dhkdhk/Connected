@@ -1,27 +1,40 @@
 package com.example.connectedclient.view;
 
+import android.content.Context;
+
 import com.example.connectedclient.domain.Member;
-import com.example.connectedclient.domain.MemberToken;
 import com.example.connectedclient.domain.repository.MemberNetworkRepository;
-import com.example.connectedclient.domain.repository.MemberTokenRepository;
 
 public class LoginPresenter implements LoginConstract.Presenter {
 
-    private MemberTokenRepository memberTokenRepository;
+
+    private LoginConstract.View view;
     private MemberNetworkRepository memberNetworkRepository;
 
-    private final static String OAUTH_CLIENT_ID = "zNnDnGH5ecP2js8Mk84q";
-    private final static String OAUTH_CLIENT_SECRET = "hioeQdFLhG";
+    private NaverLogin naverLogin;
+    private Context mContext;
 
-    public LoginPresenter(MemberTokenRepository tokenRepository, MemberNetworkRepository networkRepository){
-        this.memberTokenRepository = tokenRepository;
+
+    public LoginPresenter(MemberNetworkRepository networkRepository, LoginConstract.View view, Context context){
+        this.view = view;
         this.memberNetworkRepository = networkRepository;
+        this.mContext = context;
     }
 
     @Override
     public void registerMember(Member member) {
-       MemberToken token = memberTokenRepository.getToken(OAUTH_CLIENT_ID, OAUTH_CLIENT_SECRET);
-       member.setMemberToken(token);
-       memberNetworkRepository.registerMember(member);
     }
+
+    @Override
+    public void requestNaverInformation(String accessToken){
+        memberNetworkRepository.requestNaverInformation(accessToken);
+    }
+
+    @Override
+    public boolean naverLogin() {
+        naverLogin = new NaverLogin(mContext, this);
+        naverLogin.forceLogin();
+        return false;
+    }
+
 }

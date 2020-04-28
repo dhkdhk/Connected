@@ -2,8 +2,7 @@ package com.example.connectedclient;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.example.connectedclient.domain.Member;
-import com.example.connectedclient.domain.repository.MemberTokenSDKRepository;
+import com.example.connectedclient.view.LoginConstract;
 import com.example.connectedclient.view.LoginPresenter;
 
 import org.junit.Test;
@@ -16,9 +15,11 @@ import org.junit.runner.RunWith;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
+
+    private LoginConstract.Presenter presenter;
+
     @Test
     public void memberApiRequestTest() {
-
 
     }
 }
