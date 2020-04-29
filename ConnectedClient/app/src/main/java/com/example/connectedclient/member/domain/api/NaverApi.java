@@ -1,6 +1,6 @@
-package com.example.connectedclient.api;
+package com.example.connectedclient.member.domain.api;
 
-import com.example.connectedclient.domain.Member;
+import com.example.connectedclient.member.domain.Member;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

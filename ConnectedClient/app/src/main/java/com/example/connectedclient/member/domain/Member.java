@@ -1,4 +1,4 @@
-package com.example.connectedclient.domain;
+package com.example.connectedclient.member.domain;
 
 
 import java.time.LocalDateTime;

@@ -1,4 +1,6 @@
-package com.example.connectedclient.api;
+package com.example.connectedclient.member.domain.api.provider;
+
+import com.example.connectedclient.member.domain.api.NaverApi;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

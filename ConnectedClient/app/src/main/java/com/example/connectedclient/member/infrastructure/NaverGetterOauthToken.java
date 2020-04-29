@@ -1,13 +1,14 @@
-package com.example.connectedclient.view;
+package com.example.connectedclient.member.infrastructure;
 
 import android.app.Activity;
 import android.content.Context;
 
+import com.example.connectedclient.member.interfaces.login.LoginConstract;
 import com.nhn.android.naverlogin.OAuthLogin;
 import com.nhn.android.naverlogin.OAuthLoginHandler;
 import com.nhn.android.naverlogin.data.OAuthErrorCode;
 
-public class NaverLogin {
+public class NaverGetterOauthToken {
 
     private OAuthLogin mOAuthLoginInstance;
     private Context mContext;
@@ -18,7 +19,7 @@ public class NaverLogin {
 
     private LoginConstract.Presenter presenter;
 
-    public NaverLogin(Context mContext, LoginConstract.Presenter presenter) {
+    public NaverGetterOauthToken(Context mContext, LoginConstract.Presenter presenter) {
         this.presenter = presenter;
         this.mContext = mContext;
         initNaverAuthInstance();

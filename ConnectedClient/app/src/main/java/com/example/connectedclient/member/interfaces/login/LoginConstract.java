@@ -1,6 +1,6 @@
-package com.example.connectedclient.view;
+package com.example.connectedclient.member.interfaces.login;
 
-import com.example.connectedclient.domain.Member;
+import com.example.connectedclient.member.domain.Member;
 
 public interface LoginConstract {
 

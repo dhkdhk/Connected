@@ -1,4 +1,6 @@
-package com.example.connectedclient.api;
+package com.example.connectedclient.member.domain.api.provider;
+
+import com.example.connectedclient.member.domain.api.RegisterMemberApi;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,4 +1,4 @@
-package com.example.connectedclient.view;
+package com.example.connectedclient.member.interfaces.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,9 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.connectedclient.R;
-import com.example.connectedclient.domain.repository.MemberNetworkRegister;
+import com.example.connectedclient.member.application.LoginPresenter;
+import com.example.connectedclient.member.infrastructure.MemberNaverInformation;
+import com.example.connectedclient.member.interfaces.main.MainActivity;
 import com.nhn.android.naverlogin.ui.view.OAuthLoginButton;
 
 import static com.nhn.android.naverlogin.OAuthLogin.oauthLoginHandler;
@@ -27,7 +29,6 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.V
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        presenter = new LoginPresenter(new MemberNetworkRegister(), this, this);
 
         mOAuthOAuthLoginButton = findViewById(R.id.buttonOAuthLoginImg);
         mOAuthOAuthLoginButton.setOAuthLoginHandler(oauthLoginHandler);
@@ -58,6 +59,7 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.V
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.buttonOAuthLoginImg:
+                presenter = new LoginPresenter(new MemberNaverInformation(), this, this);
                 presenter.naverLogin();
         }
     }

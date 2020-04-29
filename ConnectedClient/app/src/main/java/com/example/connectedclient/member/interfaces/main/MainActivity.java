@@ -1,4 +1,4 @@
-package com.example.connectedclient.view;
+package com.example.connectedclient.member.interfaces.main;
 
 import android.os.Bundle;
 

@@ -2,8 +2,7 @@ package com.example.connectedclient;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.example.connectedclient.view.LoginConstract;
-import com.example.connectedclient.view.LoginPresenter;
+import com.example.connectedclient.member.interfaces.login.LoginConstract;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,24 +1,15 @@
 package com.example.connectedclient;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.widget.EditText;
 
-import com.example.connectedclient.domain.repository.MemberNetworkRegister;
-import com.example.connectedclient.view.LoginActivity;
-import com.example.connectedclient.view.LoginConstract;
-import com.example.connectedclient.view.LoginPresenter;
+import com.example.connectedclient.member.interfaces.login.LoginConstract;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
-
-import static org.junit.Assert.*;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
