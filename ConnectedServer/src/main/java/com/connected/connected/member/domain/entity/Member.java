@@ -1,9 +1,6 @@
-package com.connected.connected.member.domain;
+package com.connected.connected.member.domain.entity;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -11,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity @Builder
+@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Member {
@@ -22,6 +20,6 @@ public class Member {
     private int age;
     private String phoneNumber;
     @Embedded
-    private Account account;
+    private MemberToken memberToken;
 
 }

@@ -1,12 +1,14 @@
 package com.connected.connected.member;
 
 
-import com.connected.connected.member.domain.Account;
 import com.connected.connected.member.interfaces.dto.MemberDto;
+import com.connected.connected.member.setup.MemberBuilder;
+import com.connected.connected.member.setup.MemberSetUp;
 import com.connected.connected.support.ControllerSupport;
 import io.github.benas.randombeans.EnhancedRandomBuilder;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -15,12 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 public class MemberControllerTest extends ControllerSupport {
 
-    private Account account;
 
-    @Before
-    public void setUp(){
-        account = EnhancedRandomBuilder.aNewEnhancedRandom().nextObject(Account.class);
-    }
 
     @Test
     public void signUpValidationCheck() throws Exception{
@@ -30,7 +27,6 @@ public class MemberControllerTest extends ControllerSupport {
                 .memberNickName("닉네임")
                 .phoneNumber("010-3781")
                 .age(5)
-                .account(account)
                 .build();
 
         //When & Then

@@ -1,7 +1,8 @@
 package com.connected.connected.member.setup;
 
-import com.connected.connected.member.domain.Member;
+import com.connected.connected.member.domain.entity.Member;
 import io.github.benas.randombeans.EnhancedRandomBuilder;
+import org.springframework.stereotype.Component;
 
 public class MemberBuilder {
 

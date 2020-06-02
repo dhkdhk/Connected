@@ -1,7 +1,7 @@
 package com.connected.connected.member.interfaces.dto;
 
 
-import com.connected.connected.member.domain.Account;
+import com.connected.connected.member.domain.entity.MemberToken;
 import com.connected.connected.member.interfaces.dto.validation.PhoneNumberConstraint;
 import lombok.*;
 
@@ -20,6 +20,7 @@ public class MemberDto {
 
     @PhoneNumberConstraint
     private String phoneNumber;
-    private Account account;
+
+    private MemberToken memberToken;
 
 }

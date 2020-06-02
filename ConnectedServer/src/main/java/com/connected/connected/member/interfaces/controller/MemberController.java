@@ -1,5 +1,6 @@
 package com.connected.connected.member.interfaces.controller;
 
+import com.connected.connected.member.application.MemberService;
 import com.connected.connected.member.interfaces.dto.MemberDto;
 import com.connected.connected.member.interfaces.handler.ErrorResource;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,12 @@ import javax.validation.Valid;
 @Controller
 public class MemberController {
 
+    private MemberService memberService;
+
+    public MemberController(MemberService memberService){
+        this.memberService = memberService;
+    }
+
     @PostMapping(value = "/members")
     public ResponseEntity memberSignUp(@RequestBody @Valid MemberDto memberDto, Errors errors){
 
@@ -21,8 +28,6 @@ public class MemberController {
             ErrorResource errorResource = new ErrorResource(errors);
             return ResponseEntity.badRequest().body(errorResource.getErrorResources());
         }
-
-
 
         return ResponseEntity.status(HttpStatus.OK).build();
     }

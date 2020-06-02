@@ -1,6 +1,6 @@
 package com.connected.connected.member.setup;
 
-import com.connected.connected.member.domain.Member;
+import com.connected.connected.member.domain.entity.Member;
 import com.connected.connected.member.domain.repository.MemberRepository;
 import org.springframework.stereotype.Component;
 
