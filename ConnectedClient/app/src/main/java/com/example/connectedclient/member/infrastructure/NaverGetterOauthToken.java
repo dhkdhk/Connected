@@ -13,8 +13,8 @@ public class NaverGetterOauthToken {
     private OAuthLogin mOAuthLoginInstance;
     private Context mContext;
 
-    private static final String OAUTH_CLIENT_ID = "zNnDnGH5ecP2js8Mk84q";
-    private static final String OAUTH_CLIENT_SECRET = "hioeQdFLhG";
+    private static final String OAUTH_CLIENT_ID = "xxx";
+    private static final String OAUTH_CLIENT_SECRET = "xxx";
     private static final String OAUTH_CLIENT_NAME = "Connected";
 
     private LoginConstract.Presenter presenter;
